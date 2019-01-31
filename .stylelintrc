@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "double",
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["extend", "at-root", "debug", "warn", "error", "if", "else", "for", "each", "while", "mixin", "include", "content", "return", "function"
+      ]}
+    ],
+    "declaration-empty-line-before": null,
+    "block-no-empty": true,
+    "shorthand-property-no-redundant-values": true,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "at-rule-empty-line-before": null
+  }
+}
