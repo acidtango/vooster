@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const ApiService = {
+const ApiConnector = {
   init(baseURL) {
     axios.defaults.baseURL = baseURL
   },
@@ -45,4 +45,4 @@ const ApiService = {
   },
 }
 
-export default ApiService
+export default ApiConnector
