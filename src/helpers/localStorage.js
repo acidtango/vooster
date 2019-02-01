@@ -1,4 +1,4 @@
-import { Helpers } from '@/utils'
+import isObject from 'lodash/isObject'
 
 const NAMESPACE = 'vooster'
 
@@ -17,7 +17,7 @@ const LocalStorage = {
       return false
     }
 
-    const data = Helpers.isObject(value) ? JSON.stringify(value) : value
+    const data = isObject(value) ? JSON.stringify(value) : value
     localStorage.setItem(`${NAMESPACE}-${key}`, data)
 
     return true
