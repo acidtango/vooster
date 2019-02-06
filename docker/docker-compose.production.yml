@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    image: xxxxxxxxxxxx.dkr.ecr.eu-west-1.amazonaws.com/vooster/app:${VERSION}
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 100M
+      restart_policy:
+        condition: on-failure

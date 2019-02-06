@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: vooster_tests
+    build:
+      context: ..
+      dockerfile: ./docker/test.Dockerfile
+    command: npm run test:unit
