@@ -1,0 +1,11 @@
+# DO NOT USE THIS FILE TO LAUNCH INSTANCES THIS
+# FILE SHOULD BE USED ONLY FOR BUILDING IMAGES
+
+version: '3.7'
+
+services:
+  app:
+    image: xxxxxxxxxxxx.dkr.ecr.eu-west-1.amazonaws.com/vooster/app:${VERSION}
+    build:
+      context: ..
+      dockerfile: ./docker/build.Dockerfile
