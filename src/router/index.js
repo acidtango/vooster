@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import userRoutes from './users'
 
-let utils = require('@/router/utils')
+import utils from '@/router/utils'
 
 Vue.use(Router)
 
