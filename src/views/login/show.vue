@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'LoginShow',
   data() {
     return { langs: ['es', 'en'] }
   },

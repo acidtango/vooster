@@ -9,7 +9,7 @@
 import Button from '@/components/Button'
 
 export default {
-  name: 'Register',
+  name: 'RegisterShow',
   components: { Button },
 }
 </script>
