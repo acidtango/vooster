@@ -1,4 +1,4 @@
-const utils = require('@/router/utils')
+import utils from '@/router/utils'
 
 export default [
   utils.buildRoute('/users', 'users', 'list'),
