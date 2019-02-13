@@ -9,4 +9,7 @@ module.exports = {
       enableInSFC: true,
     },
   },
+  devServer: {
+    open: true,
+  },
 }
