@@ -1,6 +1,3 @@
-import utils from '@/router/utils'
+import { buildRoute } from '@/router/utils'
 
-export default [
-  utils.buildRoute('/users', 'users', 'list'),
-  utils.buildRoute('/users/new', 'users', 'new'),
-]
+export default [buildRoute('/users', 'users', 'list'), buildRoute('/users/new', 'users', 'new')]
