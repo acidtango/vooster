@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import userRoutes from './users'
-import utils from '@/router/utils'
+import { buildRoute } from '@/router/utils'
 
 Vue.use(Router)
 
 const routes = [
-  utils.buildRoute('/', 'home', 'show'),
-  utils.buildRoute('/login', 'login', 'show', { meta: { onlyWhenLoggedOut: true } }),
-  utils.buildRoute('/sign_up', 'register', 'show', { meta: { onlyWhenLoggedOut: true } }),
+  buildRoute('/', 'home', 'show'),
+  buildRoute('/login', 'login', 'show', { meta: { onlyWhenLoggedOut: true } }),
+  buildRoute('/sign_up', 'register', 'show', { meta: { onlyWhenLoggedOut: true } }),
   ...userRoutes,
 ]
 
