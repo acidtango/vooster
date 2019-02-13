@@ -10,7 +10,7 @@
       RouterLink(to="/login") Login
       |  |
       |
-      RouterLink(to="/register") Register
+      RouterLink(to="/sign_up") Register
     RouterView
 </template>
 

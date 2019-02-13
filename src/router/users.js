@@ -1,10 +1,6 @@
+let utils = require('@/router/utils')
+
 export default [
-  {
-    path: '/users',
-    component: () => import(/* webpackChunkName: "user" */ '@/views/users/List.vue'),
-  },
-  {
-    path: '/users/new',
-    component: () => import(/* webpackChunkName: "user" */ '@/views/users/New.vue'),
-  },
+  utils.buildRoute('/users', 'users', 'list'),
+  utils.buildRoute('/users/new', 'users', 'new'),
 ]

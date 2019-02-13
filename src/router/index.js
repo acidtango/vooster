@@ -3,44 +3,21 @@ import Router from 'vue-router'
 
 import userRoutes from './users'
 
-import Home from '@/views/home/Home'
-import Register from '@/views/register/Register'
-import Login from '@/views/login/Login'
+let utils = require('@/router/utils')
 
 Vue.use(Router)
+
+let routes = [
+  utils.buildRoute('/', 'home', 'show'),
+  utils.buildRoute('/login', 'login', 'show', { meta: { onlyWhenLoggedOut: true } }),
+  utils.buildRoute('/sign_up', 'register', 'show', { meta: { onlyWhenLoggedOut: true } }),
+  ...userRoutes,
+]
 
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-      meta: {
-        public: true,
-      },
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login,
-      meta: {
-        public: true,
-        onlyWhenLoggedOut: true,
-      },
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register,
-      meta: {
-        public: true,
-        onlyWhenLoggedOut: true,
-      },
-    },
-    ...userRoutes,
-  ],
+  routes,
 })
 
 router.beforeEach((to, _from, next) => {
