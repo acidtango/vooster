@@ -3,11 +3,11 @@ import Router from 'vue-router'
 
 import userRoutes from './users'
 
-let utils = require('@/router/utils')
+const utils = require('@/router/utils')
 
 Vue.use(Router)
 
-let routes = [
+const routes = [
   utils.buildRoute('/', 'home', 'show'),
   utils.buildRoute('/login', 'login', 'show', { meta: { onlyWhenLoggedOut: true } }),
   utils.buildRoute('/sign_up', 'register', 'show', { meta: { onlyWhenLoggedOut: true } }),
