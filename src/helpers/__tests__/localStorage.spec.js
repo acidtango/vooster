@@ -1,4 +1,4 @@
-import LocalStorage from '../local'
+import LocalStorage from '../localStorage'
 
 describe('LocalStorage', () => {
   beforeEach(() => {

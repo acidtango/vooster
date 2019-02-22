@@ -1,4 +1,4 @@
-import DateUtils from '../date'
+import DateUtils from '../dateUtils'
 
 describe('DateUtils', () => {
   describe('humanizer', () => {
